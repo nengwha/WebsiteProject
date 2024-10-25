@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Chunkish</title>
+    <link rel="icon" href="img/favicon.ico" type="image/x-icon">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.css" integrity="sha512-5A8nwdMOWrSz20fDsjczgUidUBR8liPYU+WymTZP1lmY9G6Oc7HlZv156XqnsgNUzTyMefFTcsFH/tnJE/+xBg==" crossorigin="anonymous" referrerpolicy="no-referrer"/>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+</head>
+
+<body>
+    <!--TOP NAVBAR CONTAINS THE CONTACTS ETC-->
+    <header class="top-navbar">
+            <div class="top-navbar-contacts">
+                <ul>
+                    <li><a href="#">+63 965 048 0761</a></li>
+                    <li><a href="#">chunkish.shop@gmail.com</a></li>
+                </ul>
+            </div>
+            <div class="top-navbar-misc">
+                <ul>
+                    <li><a href="#">Contact Us</a></li>
+                    <li><a href="#">English</a></li>
+                    <li><a href="#">PHP</a></li>
+                </ul>
+            </div>
+    </header>
+
+    <!--MID NAVBAR CONTAINS THE LOGO, MOTTO, SEARCH BAR, SIGN-IN???, CART-->
+    <header class="mid-navbar">
+        <a href="#" class="logo"><span>CHUNKISH</span></a>
+        <div class="mid-navbar-midtext">
+            <p>One Stop Shop
+            <br>
+                Crochet Shop
+            </p>
+        </div>
+    </header>
+
+    <!--BOT NAVBAR CONTAINS THE DIFF PAGES AND A DROP DOWN MENU OF SORTS-->
+    <header class="bot-navbar">
+        <div class="bot-navbar-pages">
+            <ul>
+                <li><a href="#">SHOP</a></li>
+                <li><a href="#">ANIMALS ETC</a></li>
+                <li><a href="#">ANIMALS ETC</a></li>
+                <li><a href="#">ANIMALS ETC</a></li>
+            </ul>
+        </div>
+    </header>
+
+    <div class="position-box"></div>
+    <div class="description-box">
+        <p>Chunkish is a mini side business of a Chiang Kai Shek College Student. Chunkish sells a variety of handmade crochet items such as mini crochet dolls, keychains, crochet animals, and crochet flowers.</p>
+
+        <button type="button">SHOP NOW</button>
+    </div>
+
+    <script type="text/javascript">
+        window.onscroll = function() {addStickyClass()};
+
+        function addStickyClass() {
+            var topNavbar = document.querySelector(".top-navbar");
+            var midNavbar = document.querySelector(".mid-navbar");
+            var botNavbar = document.querySelector(".bot-navbar");
+            var sticky = header.offsetTop;
+
+            if (window.pageYOffset > sticky) {
+                topNavbar.classList.add("sticky");
+                midNavbar.classList.add("sticky");
+                botNavbar.classList.add("sticky");
+            } else {
+                topNavbar.classList.remove("sticky");
+                midNavbar.classList.remove("sticky");
+                botNavbar.classList.remove("sticky");
+            }
+        }
+    </script>
+
+    <footer id="main-footer">
+        <p><a href="#">Copyright &copy; 2024 Chunkish.shop</a></p>
+    </footer>
+</body>
+</html>
