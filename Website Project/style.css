@@ -1,0 +1,67 @@
+/*-- Body Reset --*/
+
+body {
+  overflow-x: hidden;
+  font-family: 'Montserrat', sans-serif;
+  color: #616971;
+}
+  
+/*============= TOP BAR HEADER =============*/
+  
+.top-bar{
+  background: paleturquoise;
+  height: 2.8rem;
+  padding: .5rem 0;
+}
+  
+.top-bar a{
+  font-weight: 600;
+  text-decoration: none;
+  font-size: 1.1rem;
+  color: gray;
+}
+  
+/*============= MID BAR HEADER =============*/
+
+
+.mid-bar img {
+  height: 6rem;
+  max-height: 80px;
+}
+
+.mid-bar {
+  background: palevioletred;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px;
+}
+
+
+
+/*============= NAV BAR HEADER =============*/
+
+.navbar {
+  font-size: 1rem;
+  font-weight: 600;
+  letter-spacing: .1rem;
+  background-color: paleturquoise;
+  box-shadow: 0 .5rem .5rem rgba(0, 0, 0, .2);
+  z-index: 1;
+  justify-content: center;
+}
+
+.navbar-nav {
+  flex-direction: row; 
+  justify-content: center; 
+  width: 100%; 
+}
+  
+.nav-item{
+  padding: .1rem;
+  margin: 0 40px;
+}
+
+/*============= NAV BAR HEADER =============*/
+
+
