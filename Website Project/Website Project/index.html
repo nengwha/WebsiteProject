@@ -1,87 +1,70 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <title>Chunkish</title>
-    <link rel="icon" href="img/favicon.ico" type="image/x-icon">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.css" integrity="sha512-5A8nwdMOWrSz20fDsjczgUidUBR8liPYU+WymTZP1lmY9G6Oc7HlZv156XqnsgNUzTyMefFTcsFH/tnJE/+xBg==" crossorigin="anonymous" referrerpolicy="no-referrer"/>
-    <link rel="stylesheet" href="style.css">
-    <link rel="stylesheet" href="css/bootstrap.min.css">
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+   <meta http-equiv="X-UA-Compatible" content="ie=edge">
+	<title>Chunkish</title>
+	<link rel="shortcut icon" href="img/chunkicon.png">
+	<!-- Bootstrap 4.5 CSS -->
+	<link rel="stylesheet" href="css/bootstrap.min.css">
+	<!-- Style CSS -->
+	<link rel="stylesheet" href="css/style.css">
+	<!-- Google Fonts -->
+	<link href="https://fonts.googleapis.com/css?family=Montserrat:300,400,500,600,700&display=swap" rel="stylesheet">
+    <!-- Font Awesome CDN Link -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.2/css/all.min.css">
 </head>
-
 <body>
-    <!--TOP NAVBAR CONTAINS THE CONTACTS ETC-->
-    <header class="top-navbar">
-            <div class="top-navbar-contacts">
-                <ul>
-                    <li><a href="#">+63 965 048 0761</a></li>
-                    <li><a href="#">chunkish.shop@gmail.com</a></li>
-                </ul>
+
+    <!-- Top Bar -->
+    <div class="top-bar">
+        <div class="container">
+            <div class="col-12 text-right">
+                <p><a href="tel+18885555555">Call us at 1 (800)</a></p>
             </div>
-            <div class="top-navbar-misc">
-                <ul>
-                    <li><a href="#">Contact Us</a></li>
-                    <li><a href="#">English</a></li>
-                    <li><a href="#">PHP</a></li>
-                </ul>
-            </div>
-    </header>
-
-    <!--MID NAVBAR CONTAINS THE LOGO, MOTTO, SEARCH BAR, SIGN-IN???, CART-->
-    <header class="mid-navbar">
-        <a href="#" class="logo"><span>CHUNKISH</span></a>
-        <div class="mid-navbar-midtext">
-            <p>One Stop Shop
-            <br>
-                Crochet Shop
-            </p>
         </div>
-    </header>
-
-    <!--BOT NAVBAR CONTAINS THE DIFF PAGES AND A DROP DOWN MENU OF SORTS-->
-    <header class="bot-navbar">
-        <div class="bot-navbar-pages">
-            <ul>
-                <li><a href="#">SHOP</a></li>
-                <li><a href="#">ANIMALS ETC</a></li>
-                <li><a href="#">ANIMALS ETC</a></li>
-                <li><a href="#">ANIMALS ETC</a></li>
-            </ul>
-        </div>
-    </header>
-
-    <div class="position-box"></div>
-    <div class="description-box">
-        <p>Chunkish is a mini side business of a Chiang Kai Shek College Student. Chunkish sells a variety of handmade crochet items such as mini crochet dolls, keychains, crochet animals, and crochet flowers.</p>
-
-        <button type="button">SHOP NOW</button>
     </div>
+    <!-- End Top Bar -->
 
-    <script type="text/javascript">
-        window.onscroll = function() {addStickyClass()};
 
-        function addStickyClass() {
-            var topNavbar = document.querySelector(".top-navbar");
-            var midNavbar = document.querySelector(".mid-navbar");
-            var botNavbar = document.querySelector(".bot-navbar");
-            var sticky = header.offsetTop;
+    <!-- Mid Bar -->
+    <div class="mid-bar">
+        <div class="container">
 
-            if (window.pageYOffset > sticky) {
-                topNavbar.classList.add("sticky");
-                midNavbar.classList.add("sticky");
-                botNavbar.classList.add("sticky");
-            } else {
-                topNavbar.classList.remove("sticky");
-                midNavbar.classList.remove("sticky");
-                botNavbar.classList.remove("sticky");
-            }
-        }
-    </script>
+            <a href="index.html" class="navbar-brand"><img src="img/C H U N K I S H.png" alt="Logo" title="Logo"></a>
+        </div>
 
-    <footer id="main-footer">
-        <p><a href="#">Copyright &copy; 2024 Chunkish.shop</a></p>
-    </footer>
+        
+    </div>    
+    <!-- End Mid Bar-->
+
+
+    <!-- Nav Bar -->
+        <nav class="navbar navbar-light navbar-expand-lg">
+            <div class="container">
+
+                <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarResponsive">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+
+                <div class="collapse navbar-collapse" id="navbarResponsive">
+                    <ul class="navbar-nav ml-auto">
+                        <li class="nav-item"><a href="index.html" class="nav-link">Home</a></li>
+                        <li class="nav-item"><a href="" class="nav-link">Products</a></li>
+                        <li class="nav-item"><a href="" class="nav-link">Services</a></li>
+                        <li class="nav-item"><a href="" class="nav-link">Contacts</a></li>
+                        <li class="nav-item"><a href="" class="nav-link">Blog</a></li>
+                    </ul>
+                    
+                </div>
+
+            </div>
+        </nav>
+    <!-- End Nav Bar -->
+
+
+
+
 </body>
 </html>
