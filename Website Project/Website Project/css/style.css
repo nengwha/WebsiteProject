@@ -1,4 +1,5 @@
 /*-- Body Reset --*/
+
 body {
   overflow-x: hidden;
   font-family: 'Montserrat', sans-serif;
@@ -6,258 +7,515 @@ body {
 }
   
 /*============= TOP BAR HEADER =============*/
-.top-bar {
-  background-color: #7aaec4;
-  height: 2.8rem;    
+  
+.top-bar{
+  background: paleturquoise;
+  height: 2.8rem;
   padding: .5rem 0;
+  position: sticky;
+  top: 0;
+  z-index: 10;
+  transition: height 0.3s ease, padding 0.3s ease;
 }
   
-.top-bar a {
-  color: #fff;
+.top-bar a{
+  font-weight: 600;
   text-decoration: none;
   font-size: 1.1rem;
+  color: gray;
 }
-  
-/*============= NAVIGATION =============*/
-.navbar-brand img {
+
+.top-bar.shrink{
+  height: 2rem;
+	padding: 5px 20px;
+}
+/*============= MID BAR HEADER =============*/
+
+
+.mid-bar img {
+  height: 4.3rem;
+  max-height: 80px;
+  transition: height 0.2s ease;
+}
+
+.mid-bar {
+  background: palevioletred;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px;
+  position: sticky;
+  top: 2.8rem;
+  z-index: 9;
+  transition: height 0.2s ease, padding 0.2s ease;
+  width: 100%;
+}
+
+.mid-bar.shrink {
+  height: 70px; 
+  padding: 5px 20px;
+}
+
+.mid-bar.shrink img {
   height: 3rem;
+  margin-top: 9px;
 }
+
+
+.mid-bar .search-box{
+  flex: 1;
+  position: relative;
+}
+
+.mid-bar .container{
+  display: flex;
+}
+
+.search-box {
+  position: relative;
+  margin-left: 115px; 
+  margin-top: 16px;
+}
+
+.search-box input{
+  flex: 1;
+  width: 80%;
+  height: 50px;
+  border: none;
+  outline: none;
+  background: paleturquoise;
+  border-radius: 30px;
+  color: gray;
+  font-size: 16px;
+  text-align: center;
+  transition: height 0.1s ease, width 0.1s ease;
+}
+
+.search-box button{
+  position: absolute;
+  top: 25.5px;
+  right: 143px;
+  transform: translateY(-50%);
+  border: none;
+  border-radius: 30px;
+  height: 40px;
+  width: 45px;
+  cursor: pointer;
+  color: black;
+  background-color: palevioletred;
+  transition: height 0.1s ease, width 0.15s ease, top 0.1s ease;
+}
+
+.search-box input.shrink{
+  width: 80%;
+  height: 40px;
+  margin-bottom: 16px;
+}
+
+.search-box button.shrink{
+  height: 30px;
+  width: 37px;
+  right: 158px;
+  top: 20px;
+}
+
+@media (max-width: 819px){
+  .search-box {
+    display: none; 
+}
+}
+
+@media (max-width: 991px){
+
+  .search-box input {
+      height: 50px; 
+      font-size: 14px; 
+      transition: height 0.1s ease, width 0.1s ease;
+
+  }
+
+  .search-box button {
+      height: 40px; 
+      width: 45px; 
+      left: 155px;
+      top: 20px;
+      transition: height 0.1s ease, width 0.1s ease, top 0.1s ease;
+  }
+  .search-box button.shrink {
+      height: 30px; 
+      width: 35px; 
+      left: 238px; 
+      top: 20px;
+  }
+}
+
+@media (max-width: 1025px){
+
+  .search-box input {
+      height: 50px; 
+      font-size: 14px; 
+      transition: height 0.1s ease, width 0.1s ease;
+
+  }
+
+  .search-box button {
+      height: 40px; 
+      width: 45px; 
+      right: 103px; 
+      top: 20px;
+      transition: height 0.1s ease, width 0.15s ease, top 0.1s ease;
+  }
+  .search-box button.shrink {
+      height: 30px; 
+      width: 35px; 
+      right: 122px; 
+      top: 20px;
+  }
+}
+
+@media (max-width: 1199px){
+
+  .search-box input {
+      height: 50px; 
+      font-size: 14px; 
+      transition: height 0.1s ease, width 0.1s ease;
+
+  }
+
+  .search-box button {
+      height: 40px; 
+      width: 45px; 
+      right: 104px; 
+      top: 25px;
+      transition: height 0.1s ease, width 0.15s ease, top 0.1s ease;
+  }
+  .search-box button.shrink {
+      height: 30px; 
+      width: 35px; 
+      right: 122px; 
+      top: 20px;
+  }
+}
+
+.container1{
+  display: flex;
+  position: absolute;
+  right: 35px;
+  align-items: center;
+}
+
+.sign-in{
+  position: relative;
+  margin-right: 15px;
+  margin-bottom: 0; 
+}
+
+.shopping-cart{
+  margin-bottom: 0; 
+  position: relative;
+  top: -0.2px;
+}
+
+.sign-in a, .shopping-cart a{
+  font-size: 22px;
+  text-decoration: none;
+  color: paleturquoise;
+}
+
+.sign-in a:hover, .shopping-cart a:hover{
+  color: palegreen;
+}
+
+@media(max-width:1314px){
+  .container1{
+    display: flex;
+    position: absolute;
+    right: 5px;
+    align-items: center;
+  }
+
+  .sign-in{
+    top: 1.5px;
+  }
   
+}
+
+@media(max-width:1215px){
+  .container1{
+    display: flex;
+    position: absolute;
+    right: 0px;
+    align-items: center;
+  }
+
+  .sign-in{
+    top: 1.5px;
+  }
+  
+}
+
+@media (max-width: 1117px) {
+  .sign-in .text,
+  .shopping-cart .text {
+      display: none;
+  }
+
+  .sign-in a, .shopping-cart a{
+    font-size: 30px;
+    right: 35px;
+    margin-right: 30px;
+    margin-right: 15px;
+    align-items: center;
+  }
+
+  .sign-in{
+    top: 1.5px;
+  }
+}
+
+
+@media (max-width:819px) {
+  .sign-in .text,
+  .shopping-cart .text {
+      display: none;
+  }
+
+  .sign-in, .shopping-cart{
+    right: 35px;
+    align-items: center;
+  }
+
+  .sign-in{
+    top: 1.5px;
+  }
+}
+
+@media (max-width:496px) {
+  .sign-in .text,
+  .shopping-cart .text {
+      display: none;
+  }
+
+  .sign-in, .shopping-cart{
+    right: 15px;
+    align-items: center;
+  }
+
+  .sign-in{
+    top: 1.5px;
+  }
+}
+
+@media (max-width:466px) {
+  .sign-in .text,
+  .shopping-cart .text {
+      display: none;
+  }
+
+  .sign-in, .shopping-cart{
+    display: none;
+  }
+
+}
+
+
+
+/*============= NAV BAR HEADER =============*/
+
 .navbar {
-  font-size: 1.15rem;
+  font-size: 1rem;
   font-weight: 600;
   letter-spacing: .1rem;
-  box-shadow: 0 .5rem .5rem rgba(0, 0, 0, .1);
+  background-color: paleturquoise;
+  box-shadow: 0 .5rem .5rem rgba(0, 0, 0, .2);
   z-index: 1;
+  justify-content: center;
+  position: sticky;
+  top: calc(2.8rem + 70px);
+  transition: height 0.2s ease, padding 0.2s ease;
+  height: 55px;
+}
+
+.navbar-nav {
+  flex-direction: row; 
+  justify-content: center; 
+  width: 100%; 
 }
   
-.navbar-item {
-  padding: .5rem;
+.nav-item{
+  padding: .1rem;
+  margin: 0 40px;
 }
-  
-.nav-link {
-  color: #5b5555!important;
+
+.navbar.shrink{
+  height: 40px;
 }
-  
-.nav-link.active, .nav-link:hover {
-  color: #4981b3!important;
-}
-  
-/*============= CAROUSEL =============*/
-#carousel {
-  box-shadow: 0 1rem 1rem rgba(0, 0, 0, .1);
-}
-  
-.carousel-inner {
-  max-height: 38rem!important;
-}
-  
-/*---Change Carousel Transition Speed --*/
-.carousel-item-next, .carousel-item-prev, .carousel-item.active {
-  transition: transform 1.2s ease;
-}
-  
-/*-- Carousel Content --*/
-.carousel-caption {
-  position: absolute;
-  top: 54%;
-  transform: translateY(-50%);
-  text-transform: uppercase;
-}
-  
-.bg-custom {
-  background-color: rgba(0, 0, 0, .4);
-  color: white;
-  border-radius: 1rem;
-}
-  
-.carousel-caption h1 {
-  font-size: 3.8rem;
-  text-shadow: .1rem 1rem .3rem rgba(0, 0, 0, .1);
-}
-  
-.border-primary {
-  border-top: .2rem solid #4981b3!important;
-}
-  
-.carousel-caption h3 {
-  font-size: 2.2rem;
-  text-shadow: .1rem 1rem .2rem rgba(0, 0, 0, .1);
-}
-  
-.btn-lg {
-  border-radius: 0;
-  text-transform: uppercase;
+
+/*============= NAV BAR COLLAPSE =============*/
+
+
+
+
+/*============= HOME BUTTON =============*/
+
+.homebutton button{
+  background-color: paleturquoise;
+  color: gray;
+  padding: 8px 15px;
+  border: none;
+  cursor: pointer;
   font-size: 1rem;
-  border-width: medium;
-}
-  
-.btn-danger {
-  background-color: #ac2615;
-  border: .05rem solid #ac2615;
-}
-  
-.btn-primary {
-  background-color: #4981b3;
-  border: .05rem solid #4981b3;
-}
-  
-.btn-primary:hover, .btn-primary:focus {
-  background-color: #68a0d2!important;
-  border: .05rem solid #68a0d2!important;
-}
-  
-  
-/*===== FIXED BACKGROUND IMG =====*/
-
-.fixed {
-  background-image: url('../img/JOANNIV.png');
-  position: fixed;
-}
-  
-.fixed-background {
-  padding: 10rem 0;
-}
-  
-.fixed-background {
-  overflow: hidden; /*-- Correction for iOS --*/
-}
-  
-  
-/*-- Emoji Navbar --*/
-.emoji {
-  background-image: linear-gradient(to right, #4981b3, #ac2615);
-  min-height: 0!important;
-  padding: .4rem 0!important;
+  font-weight: 600;
 }
 
-.emoji .svg-inline--fa {
-  margin: 0 auto;
-  color: white;
-  font-size: 2rem;
-}
-  
-/*============= FOOTER =============*/
-
-footer {
-  background-color: #383838;
-  padding: 1rem 2rem 3rem;
+.homebutton:hover button{
+  background-color: rgb(166, 241, 225);
 }
 
-footer img {
-  height: 3.5rem;
-  margin: 1.5rem auto;
+/*============= CONTACTS BUTTON =============*/
+
+.contactsbutton button{
+  background-color: paleturquoise;
+  color: gray;
+  padding: 8px 15px;
+  border: none;
+  cursor: pointer;
+  font-size: 1rem;
+  font-weight: 600;
 }
 
-footer p, footer a, .socket a{
-  color: white;
-  text-decoration: none;
+.contactsbutton:hover button{
+  background-color: rgb(166, 241, 225);
 }
 
-ul.social {
-  list-style-type: none;
-  display: flex;
-  max-width: 16rem;
-  margin: 0 auto;
-  padding: 0;
+/*============= BLOG BUTTON =============*/
+
+.blogbutton button{
+  background-color: paleturquoise;
+  color: gray;
+  padding: 8px 15px;
+  border: none;
+  cursor: pointer;
+  font-size: 1rem;
+  font-weight: 600;
 }
 
-ul.social li {
-  margin: 0 auto;
+.blogbutton:hover button{
+  background-color: rgb(166, 241, 225);
 }
 
-footer .svg-inline--fa {
-  font-size: 2.3rem;
+/*============= PRODUCTS DROPDOWN =============*/
+
+.productsdropdown {
+  display: inline-block;
 }
 
-footer .svg-inline--fa:hover {
-  color: #68a0d2;
+.productsdropdown button{
+  background-color: paleturquoise;
+  color: gray;
+  padding: 10px 15px;
+  border: none;
+  cursor: pointer;
+  font-size: 1rem;
+  font-weight: 600;
 }
-/*============= SOCKET =============*/
 
-.socket {
-  background-color: #222222;
-  border-top: .1rem solid #4981b3;
-}
-  
-  
-  
-/*============= MEDIA QUERIES =============*/
-  
-/* Devices under 1199px (xl) */
-@media (max-width: 1199.98px) {
-  .carousel-caption h1 {
-    font-size: 2.8rem;
-  }
-  .carousel-caption h3 {
-    font-size: 1.8rem;
-  }
-  
-}
-/* Devices under 992px (lg) */
-@media (max-width: 991.98px) {
-  .carousel-caption h1 {
-    font-size: 2.5rem;
-  }
-  .carousel-caption h3 {
-    font-size: 1.5rem;
-  }
-  .btn-lg {
-    font-size: .95rem;
-  }
-}
-  
-  
-/*============ BOOTSTRAP BREAK POINTS:
-  
-Extra small (xs) devices (portrait phones, less than 576px)
-No media query since this is the default in Bootstrap
-  
-Small (sm) devices (landscape phones, 576px and up)
-@media (min-width: 576px) { ... }
-  
-Medium (md) devices (tablets, 768px and up)
-@media (min-width: 768px) { ... }
-  
-Large (lg) devices (desktops, 992px and up)
-@media (min-width: 992px) { ... }
-  
-Extra (xl) large devices (large desktops, 1200px and up)
-@media (min-width: 1200px) { ... }
-  
-=============*/
-  
-/*-- Bootstrap Mobile Gutter Fix --*/
-.row, .container-fluid {
-  margin-left: 0px !important;
-  margin-right: 0px !important;
-}
-  
-/*-- Fixed Background Image --*/
-.fixed-background {
-  position: relative;
-  width: 100%;
-  z-index: 1000!important;
-}
-.fixed-wrap {
-  clip: rect(0, auto, auto, 0);
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  z-index: -999 !important;
-}
-.fixed {
-  z-index: -999!important;
+.productsdropdown a{
   display: block;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  background-size: cover;
-  background-position: center center;
-  -webkit-transform: translateZ(0);
-  transform: translateZ(0);
-  will-change: transform;
+  color: gray;
+  text-decoration: none;
+  padding: 5px 10px;
 }
+
+.productsdropdown .productscontent{
+  display: none;
+  background-color: palegreen;
+  position: absolute;
+  min-width: 100px;
+  box-shadow: .2rem .2rem .2rem rgba(0, 0, 0, .2);
+}
+
+.productsdropdown:hover .productscontent{
+  display: block;
+}
+
+.productsdropdown:hover button{
+  background-color: rgb(166, 241, 225);
+}
+
+.productsdropdown a:hover{
+  background-color: paleturquoise;
+}
+
+/*============= SERVICES DROPDOWN =============*/
+
+.servicesdropdown {
+  display: inline-block;
+}
+
+.servicesdropdown button{
+  background-color: paleturquoise;
+  color: gray;
+  padding: 10px 15px;
+  border: none;
+  cursor: pointer;
+  font-size: 1rem;
+  font-weight: 600;
+}
+
+.servicesdropdown a{
+  display: block;
+  color: gray;
+  text-decoration: none;
+  padding: 5px 10px;
+}
+
+.servicesdropdown .servicescontent{
+  display: none;
+  background-color: palegreen;
+  position: absolute;
+  min-width: 100px;
+  box-shadow: .2rem .2rem .2rem rgba(0, 0, 0, .2);
+}
+
+.servicesdropdown:hover .servicescontent{
+  display: block;
+}
+
+.servicesdropdown:hover button{
+  background-color: rgb(166, 241, 225);
+}
+
+.servicesdropdown a:hover{
+  background-color: paleturquoise;
+}
+
+
+
+
+
+
+
+/*============= NAV BAR COLLAPSE (UNFINISHED) =============*/
+
+
+@media (max-width: 991px) {
+
+
+  .navbar-nav {
+      flex-direction: column; 
+      width: 100%; 
+  }
+
+  .nav-item {
+      width: 100%; 
+      margin: 5px 0; 
+  }
+
+  .dropdown-menu {
+      position: static; 
+      width: 100%; 
+      background: transparent;
+  }
+}
+
