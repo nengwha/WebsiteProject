@@ -14,13 +14,15 @@
 	<link href="https://fonts.googleapis.com/css?family=Montserrat:300,400,500,600,700&display=swap" rel="stylesheet">
     <!-- Font Awesome CDN Link -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.2/css/all.min.css">
+    <!-- Iconscout Link -->
+    <link rel="stylesheet" href="https://unicons.iconscout.com/release/v4.0.0/css/line.css">
 </head>
 <body>
 
     <!-- Top Bar -->
     <div class="top-bar">
         <div class="container">
-            <div class="col-12 text-right">
+            <div class="col-12 text-left">
                 <p><a href="tel+18885555555">Call us at 1 (800)</a></p>
             </div>
         </div>
@@ -29,13 +31,29 @@
 
 
     <!-- Mid Bar -->
-    <div class="mid-bar">
+    <div class="mid-bar" id="midBar">
         <div class="container">
+            <div class="chunkish-logo">
+                <a href="index.html" class="navbar-brand"><img src="img/C H U N K I S H.png" alt="Logo" title="Logo"></a>
+            </div>
 
-            <a href="index.html" class="navbar-brand"><img src="img/C H U N K I S H.png" alt="Logo" title="Logo"></a>
+            <div class="search-box">
+                <form action="">
+                    <input type="text" name="search" id="srch" placeholder="Search">
+                    <button type="submit"><i class="fa fa-search"></i></button>
+                </form>
+            </div>
         </div>
 
-        
+        <div class="container1">
+            <div class="sign-in">
+                <a href="" class="fa fa-user"><span class="text"> Sign in</span></a>
+            </div>
+
+            <div class="shopping-cart">
+                <a href="" class="cart-link"><i class="fa fa-shopping-cart"><span class="text"> Cart</span></i></a>
+            </div>
+        </div>
     </div>    
     <!-- End Mid Bar-->
 
@@ -48,23 +66,81 @@
                     <span class="navbar-toggler-icon"></span>
                 </button>
 
-                <div class="collapse navbar-collapse" id="navbarResponsive">
-                    <ul class="navbar-nav ml-auto">
-                        <li class="nav-item"><a href="index.html" class="nav-link">Home</a></li>
-                        <li class="nav-item"><a href="" class="nav-link">Products</a></li>
-                        <li class="nav-item"><a href="" class="nav-link">Services</a></li>
-                        <li class="nav-item"><a href="" class="nav-link">Contacts</a></li>
-                        <li class="nav-item"><a href="" class="nav-link">Blog</a></li>
-                    </ul>
-                    
-                </div>
+                    <div class="collapse navbar-collapse" id="navbarResponsive">
+                        <ul class="navbar-nav ml-auto">
 
-            </div>
+                            <div class="homebutton">
+                                <button class="nav-item"><a href="index.html" class="nav-link">Home</a></button>
+                            </div>
+
+                            <div class="productsdropdown">
+                                <button class="nav-item"><a href="" class="nav-link">Products</a></button>
+                                    <div class="productscontent">
+                                        <a href="">Dolls</a>
+                                        <a href="">Rose</a>
+                                        <a href="">Tulips</a>
+                                    </div>
+                            </div>
+
+                            <div class="servicesdropdown">
+                                <button class="nav-item"><a href="" class="nav-link">Services</a></button>
+                                    <div class="servicescontent">
+                                        <a href="">Jelqing</a>
+                                        <a href="">Edging</a>
+                                        <a href="">Gooning</a>
+                                    </div>
+                            </div>
+
+                            <div class="contactsbutton">
+                                <button class="nav-item"><a href="" class="nav-link">Contacts</a></button>
+                            </div>
+
+                            <div class="blogbutton">
+                                <button class="nav-item"><a href="" class="nav-link">Blog</a></button>
+                            </div>
+
+                        </ul>
+                        
+                    </div>
+                </div>
         </nav>
     <!-- End Nav Bar -->
 
+    <div style="height: 2000px; padding: 20px;">
+		<h1>Welcome to the Chunkish Website!</h1>
+		<p>Scroll down nigger</p>
+	</div>
 
+    <script>
+		window.addEventListener('scroll', function() {
+			const midBar = document.getElementById('midBar');
+			if (window.scrollY > 50) { // Start shrinking when scrolled 50px
+				midBar.classList.add('shrink');
+			} else {
+				midBar.classList.remove('shrink');
+			}
+		});
+	</script>
 
+    <!-- jQuery and Bootstrap Bundle (includes Popper) -->
+     
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    <script>
+        const searchInput = document.querySelector('.search-box input');
+        const searchButton = document.querySelector('.search-box button');
+      
+        window.addEventListener('scroll', function() {
+          if (window.scrollY > 50) {
+            searchInput.classList.add('shrink');
+            searchButton.classList.add('shrink');
+          } else {
+            searchInput.classList.remove('shrink');
+            searchButton.classList.remove('shrink');
+          }
+        });
+      </script>
 
 </body>
 </html>
