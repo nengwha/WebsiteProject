@@ -16,14 +16,38 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.2/css/all.min.css">
     <!-- Iconscout Link -->
     <link rel="stylesheet" href="https://unicons.iconscout.com/release/v4.0.0/css/line.css">
+
 </head>
 <body>
 
     <!-- Top Bar -->
     <div class="top-bar">
         <div class="container">
-            <div class="col-12 text-left">
-                <p><a href="tel+18885555555">Call us at 1 (800)</a></p>
+            <div class="row align-items-center py-2">
+                <!-- Left side contact info -->
+                <div class="col-md-6 d-flex align-items-center">
+                    <a href="tel:+18885555555" class="me-4">
+                        <i class="fas fa-phone me-2"></i>Call us at 1 (800)
+                    </a>
+                    <a href="mailto:info@chunkish.com">
+                        <i class="fas fa-envelope me-2"></i>info@chunkish.com
+                    </a>
+                </div>
+                
+                <!-- Right side options -->
+                <div class="col-md-6">
+                    <div class="d-flex justify-content-end align-items-center">
+                        <a href="#contact" class="btn btn-sm btn-outline-light">Contact Us</a>
+                        <select class="form-select form-select-sm me-3" style="width: auto;" aria-label="Language">
+                            <option value="en" selected>English</option>
+                            <option value="fil">Filipino</option>
+                        </select>
+                        <select class="form-select form-select-sm me-3" style="width: auto;" aria-label="Currency">
+                            <option value="usd" selected>PHP</option>
+                            <option value="php">USD</option>
+                        </select>
+                    </div>
+                </div>
             </div>
         </div>
     </div>
@@ -106,27 +130,168 @@
         </nav>
     <!-- End Nav Bar -->
 
-    <div style="height: 2000px; padding: 20px;">
-		<h1>Welcome to the Chunkish Website!</h1>
-		<p>Scroll down nigger</p>
-	</div>
+    <!-- Jumbotron -->
+    <div class="jumbotron jumbotron-fluid">
+        <div class="container">
+          <h1 class="display-4"><br><br></h1>
+        </div>
+      </div>
 
-    <script>
-		window.addEventListener('scroll', function() {
-			const midBar = document.getElementById('midBar');
-			if (window.scrollY > 50) { // Start shrinking when scrolled 50px
-				midBar.classList.add('shrink');
-			} else {
-				midBar.classList.remove('shrink');
-			}
-		});
-	</script>
+    <!-- End Jumbotron -->
+
+    <!-- Main Content -->
+    <div style="height: 1px; padding: 0px;">
+	</div>
+    <div class="container">
+    <!-- Products Section -->
+    <section class="products-section mb-5"> 
+        <h2 class="text-center mb-4">OUR PRODUCTS</h2>
+        <div class="row">
+            <!-- Product Card 1 -->
+            <div class="col-md-4 mb-4">
+                <div class="card">
+                    <img src="https://via.placeholder.com/300" class="card-img-top" alt="Product 1">
+                    <div class="card-body">
+                        <h5 class="card-title">Product 1</h5>
+                        <h6 class="text-primary">$19.99</h6>
+                        <p class="card-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+                        <div class="d-flex justify-content-between align-items-center">
+                            <input type="number" class="form-control w-20" min="1" value="1" style="width: 70px;">
+                            <button class="btn btn-success w-75 ms-2" style="width: calc(100% - 90px);"><i class="fas fa-shopping-cart ms-1"> Add to Cart</i></button>
+                        </div>  
+                    </div>
+                </div>
+            </div>
+
+            <!-- Product Card 2 -->
+            <div class="col-md-4 mb-4">
+                <div class="card">
+                    <img src="https://via.placeholder.com/300" class="card-img-top" alt="Product 2">
+                    <div class="card-body">
+                        <h5 class="card-title">Product 2</h5>
+                        <h6 class="text-primary">$29.99</h6>
+                        <p class="card-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+                        <div class="d-flex justify-content-between align-items-center">
+                            <input type="number" class="form-control w-20" min="1" value="1" style="width: 70px;">
+                            <button class="btn btn-success w-75 ms-2" style="width: calc(100% - 90px);"><i class="fas fa-shopping-cart ms-1"> Add to Cart</i></button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Product Card 3 -->
+            <div class="col-md-4 mb-4">
+                <div class="card">
+                    <img src="https://via.placeholder.com/300" class="card-img-top" alt="Product 3">
+                    <div class="card-body">
+                        <h5 class="card-title">Product 3</h5>
+                        <h6 class="text-primary">$39.99</h6>
+                        <p class="card-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+                        <div class="d-flex justify-content-between align-items-center">
+                            <input type="number" class="form-control w-20" min="1" value="1" style="width: 70px;">
+                            <button class="btn btn-success w-75 ms-2" style="width: calc(100% - 90px);"><i class="fas fa-shopping-cart ms-1"> Add to Cart</i></button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Product Card 4 -->
+            <div class="col-md-4 mb-4">
+                <div class="card">
+                    <img src="https://via.placeholder.com/300" class="card-img-top" alt="Product 4">
+                    <div class="card-body">
+                        <h5 class="card-title">Product 4</h5>
+                        <h6 class="text-primary">$49.99</h6>
+                        <p class="card-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+                        <div class="d-flex justify-content-between align-items-center">
+                            <input type="number" class="form-control w-20" min="1" value="1" style="width: 70px;">
+                            <button class="btn btn-success w-75 ms-2" style="width: calc(100% - 90px);"><i class="fas fa-shopping-cart ms-1"> Add to Cart</i></button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Product Card 5 -->
+            <div class="col-md-4 mb-4">
+                <div class="card">
+                    <img src="https://via.placeholder.com/300" class="card-img-top" alt="Product 5">
+                    <div class="card-body">
+                        <h5 class="card-title">Product 5</h5>
+                        <h6 class="text-primary">$59.99</h6>
+                        <p class="card-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+                        <div class="d-flex justify-content-between align-items-center">
+                            <input type="number" class="form-control w-20" min="1" value="1" style="width: 70px;">
+                            <button class="btn btn-success w-75 ms-2" style="width: calc(100% - 90px);"><i class="fas fa-shopping-cart ms-1"> Add to Cart</i></button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Product Card 6 -->
+            <div class="col-md-4 mb-4">
+                <div class="card">
+                    <img src="https://via.placeholder.com/300" class="card-img-top" alt="Product 6">
+                    <div class="card-body">
+                        <h5 class="card-title">Product 6</h5>
+                        <h6 class="text-primary">$69.99</h6>
+                        <p class="card-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+                        <div class="d-flex justify-content-between align-items-center">
+                            <input type="number" class="form-control w-20" min="1" value="1" style="width: 70px;">
+                            <button class="btn btn-success w-75 ms-2" style="width: calc(100% - 90px);"><i class="fas fa-shopping-cart ms-1"> Add to Cart</i></button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    </div>
+
+    <!-- End Products Section -->
+
+    <!-- End Main Content -->
+
+    <!-- Footer -->
+  
+    <footer class="text-center py-4 w-100" style="margin: 0; padding: 0; position: relative; left: 0; right: 0;">
+        <div class="container-fluid">
+            <div class="text-center my-5">
+                <img src="img/C H U N K I S H.png" alt="Logo" class="mb-3">
+                <p class="lead">Chunkish is a mini side business of a Chiang Kai Shek College Student. Chunkish sells a variety of handmade crochet items such as mini crochet dolls, keychains, crochet animals, and crochet flowers.</p>
+            </div>
+            <p>&copy; 2024 - Chunkish. All rights reserved.</p>
+            <div class="my-3">
+                <h6>Follow Us</h6>
+                <a href="#" class="mx-2"><i class="fab fa-facebook-f"></i></a>
+                <a href="#" class="mx-2"><i class="fab fa-twitter"></i></a>
+                <a href="#" class="mx-2"><i class="fab fa-instagram"></i></a>
+            </div>
+            <div class="my-3">
+                <h6>Payment Methods</h6>
+                <img src="img/gcash.png" alt="Visa" class="mx-2">
+                <img src="img/maya.png" alt="MasterCard" class="mx-2">
+                <img src="img/paypal.png" alt="PayPal" class="mx-2">
+            </div>
+        </div>
+    </footer>
+
+    <!-- End Footer -->
+
 
     <!-- jQuery and Bootstrap Bundle (includes Popper) -->
      
     <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js"></script>
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    <script>
+		window.addEventListener('scroll', function() {
+			const midBar = document.getElementById('midBar');
+			if (window.scrollY > 50) { 
+				midBar.classList.add('shrink');
+			} else {
+				midBar.classList.remove('shrink');
+			}
+		});
+	</script>
     <script>
         const searchInput = document.querySelector('.search-box input');
         const searchButton = document.querySelector('.search-box button');
@@ -141,6 +306,7 @@
           }
         });
       </script>
+ 
 
 </body>
 </html>
